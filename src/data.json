@@ -1,0 +1,28 @@
+"{
+  "arr": [
+    {
+      "id": 1,
+      "vid": "./images/vid1.mp4"
+    },
+    {
+      "id": 2,
+      "vid": "./images/vid2.mp4"
+    },
+    {
+      "id": 3,
+      "vid": "./images/vid3.mp4"
+    },
+    {
+      "id": 4,
+      "vid": "./images/vid4.mp4"
+    },
+    {
+      "id": 5,
+      "vid": "./images/vid5.mp4"
+    },
+    {
+      "id": 6,
+      "vid": "./images/vid6.mp4"
+    }
+  ]
+}"
