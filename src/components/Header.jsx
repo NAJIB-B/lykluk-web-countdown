@@ -20,7 +20,10 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/"
-                style={({ isActive, isPending }) => (isActive ? activeClass : undefined)}
+                style={({ isActive, isPending }) =>
+                  isActive ? activeClass : undefined
+                }
+                end
               >
                 Coming Soon
               </NavLink>
@@ -28,7 +31,9 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/about"
-                style={({ isActive, isPending }) => (isActive ? activeClass : undefined)}
+                style={({ isActive, isPending }) =>
+                  isActive ? activeClass : undefined
+                }
               >
                 About Us
               </NavLink>
@@ -36,7 +41,9 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/contact"
-                style={({ isActive, isPending }) => (isActive ? activeClass : undefined)}
+                style={({ isActive, isPending }) =>
+                  isActive ? activeClass : undefined
+                }
               >
                 Contact
               </NavLink>
