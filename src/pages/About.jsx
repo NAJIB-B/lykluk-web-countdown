@@ -16,21 +16,31 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <div className="overlay"></div>
       <div className="container about-container">
         <div className="about">
           <div className="about-text">
             <h1>About Us</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, aliquam repudiandae quos ab amet eveniet. Quae, deserunt ipsam, labore aperiam hic ratione nulla enim minus amet obcaecati eum iusto aliquid maxime, atque rerum laborum itaque repellendus voluptatibus maiores architecto corporis dolores? Veritatis consectetur ex tempora ducimus, asperiores placeat impedit dolor.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
+              aliquam repudiandae quos ab amet eveniet. Quae, deserunt ipsam,
+              labore aperiam hic ratione nulla enim minus amet obcaecati eum
+              iusto aliquid maxime, atque rerum laborum itaque repellendus
+              voluptatibus maiores architecto corporis dolores? Veritatis
+              consectetur ex tempora ducimus, asperiores placeat impedit dolor.
             </p>
             <p>
-              
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores at modi, odit quis voluptate aliquam sint perspiciatis ex corrupti earum, eveniet temporibus pariatur quasi quod tenetur aliquid accusamus impedit? Voluptates repellat odit expedita reprehenderit quam. Dolorem non perspiciatis fugit, tempore, asperiores ex quisquam quae temporibus aliquam incidunt neque ea enim sit placeat ipsa, rem ducimus dolores possimus quidem aut culpa!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores at modi, odit quis voluptate aliquam sint perspiciatis
+              ex corrupti earum, eveniet temporibus pariatur quasi quod tenetur
+              aliquid accusamus impedit? Voluptates repellat odit expedita
+              reprehenderit quam. Dolorem non perspiciatis fugit, tempore,
+              asperiores ex quisquam quae temporibus aliquam incidunt neque ea
+              enim sit placeat ipsa, rem ducimus dolores possimus quidem aut
+              culpa!
             </p>
           </div>
-          <div className="about-imgs">
-            {imagesGrid}
-          </div>
+          <div className="about-imgs">{imagesGrid}</div>
         </div>
       </div>
       <div className="about-downloads">

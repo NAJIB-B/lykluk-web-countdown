@@ -13,6 +13,7 @@ const ContextProvider = (props) => {
     seconds: 0
   }));
 
+
   const [isActive, setIsActive] = useState(() => (false));
 
   const toggleActive = () => {
@@ -36,7 +37,7 @@ const ContextProvider = (props) => {
   // Effect for updating countdown per second
   useEffect(() => {
     const interval = setInterval(() => {
-      updateRemainingTime(new Date("Oct 17, 2022"));
+      updateRemainingTime(new Date("Nov 1, 2022"));
     }, 1000);
     return () => clearInterval(interval);
   }, []);

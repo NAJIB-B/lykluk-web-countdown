@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 const Contact = () => {
   return (
     <div className="contact-page">
+      <div className="overlay"></div>
       <div className="container contact-page-container">
         <h1>Contact Us</h1>
         <div className="contact-us">
@@ -31,17 +32,23 @@ const Contact = () => {
             </span>
           </div>
           <div className="contact-form">
-            <form action="" method="post">
+            <form action="https://formsubmit.co/info@lykluk.com" method="post">
               <label htmlFor="email">Your Email</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required placeholder="Enter email"/>
               <label htmlFor="message">Message</label>
-              <textarea name="" id="message" cols="30" rows="10"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                required
+                placeholder="Enter message"
+              ></textarea>
               <input type="submit" value="Send Message" />
             </form>
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

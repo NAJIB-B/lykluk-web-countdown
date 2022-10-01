@@ -1,8 +1,10 @@
 import { useContext, useState, useEffect } from "react";
 import Video from "../components/Video";
 import { Context } from "../Context";
+import {useLocation} from "react-router-dom";
 
 const Home = () => {
+
   // Receiving countdown state from  context
   const { countDown } = useContext(Context);
   
@@ -42,6 +44,7 @@ const Home = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
+      alert("Thank you for waitlisting 😀🙏🏾")
       setFormData(prev => ({email: ""}))
     })
   }

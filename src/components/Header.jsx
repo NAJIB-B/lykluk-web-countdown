@@ -1,6 +1,9 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import {useContext} from "react";
+import {Context} from "../Context"
 
 const Header = () => {
+
   let activeClass = {
     color: "#8e00fe",
   };
