@@ -13,13 +13,6 @@ const ContextProvider = (props) => {
     seconds: 0
   }));
 
-
-  const [isActive, setIsActive] = useState(() => (false));
-
-  const toggleActive = () => {
-    setIsActive(prev => !prev);
-  };
-
   // Updating countdown function
   const updateRemainingTime = (countDownDate) => {
     let distance = countDownDate.getTime() - new Date().getTime();
@@ -42,7 +35,7 @@ const ContextProvider = (props) => {
     return () => clearInterval(interval);
   }, []);
 
-  return <Provider value={{countDown, isActive, toggleActive}}>{props.children}</Provider>;
+  return <Provider value={{countDown}}>{props.children}</Provider>;
 };
 
 export { ContextProvider, Context };
