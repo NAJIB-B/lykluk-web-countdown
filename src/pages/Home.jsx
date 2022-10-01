@@ -3,8 +3,49 @@ import Video from "../components/Video";
 import { Context } from "../Context";
 
 const Home = () => {
+  // Receiving countdown state from  context
   const { countDown } = useContext(Context);
+  
+  // Destructuring countdown state from context
   const { days, hours, minutes, seconds } = countDown;
+
+  // Creating formData state
+  const [formData, setFormData] = useState(() => ({
+    email: "",
+  }));
+
+  // Function to update formData when email is inputted
+  const handleEmail = (e) => {
+    const { type, value, name } = e.target;
+    setFormData((prev) => ({ [name]: value }));
+  };
+
+  // Function to handle submit of formData
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      Email: formData.email,
+    };
+
+    const options = {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    
+    fetch(
+      `https://sheet.best/api/sheets/d908cf8a-47a5-4249-9031-d6db0c0893c8`,
+      options
+    )
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      setFormData(prev => ({email: ""}))
+    })
+  }
+
 
   return (
     <div className="home">
@@ -22,25 +63,33 @@ const Home = () => {
           <div className="timer" id="timer">
             <div>
               <div className="timer-cards">{days}</div>
-              <h4>{days === 1? "Day": "Days"}</h4>
+              <h4>{days === 1 ? "Day" : "Days"}</h4>
             </div>
             <div>
               <div className="timer-cards">{hours}</div>
-              <h4>{hours === 1? "Hour": "Hours"}</h4>
+              <h4>{hours === 1 ? "Hour" : "Hours"}</h4>
             </div>
             <div>
               <div className="timer-cards">{minutes}</div>
-              <h4>{minutes === 1? "Minute": "Minutes"}</h4>
+              <h4>{minutes === 1 ? "Minute" : "Minutes"}</h4>
             </div>
             <div>
               <div className="timer-cards">{seconds}</div>
-              <h4>{seconds ===1? "Second": "Seconds"}</h4>
+              <h4>{seconds === 1 ? "Second" : "Seconds"}</h4>
             </div>
           </div>
         </section>
         <section className="waitlist">
-          <form action="" method="post">
-            <input type="text" placeholder="Email" className="form-inp" />
+          <form action="" method="post" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Email"
+              className="form-inp"
+              name="email"
+              value={formData.email}
+              onChange={handleEmail}
+              required
+            />
             <input
               type="submit"
               value="Join the waitlist"
@@ -53,28 +102,28 @@ const Home = () => {
         </section>
         <section className="social">
           <div className="social-media-icons">
-            <a href="">
+            <a href="" target="_blank">
               <img
                 src="./images/twitter-icon.svg"
                 alt="twitter icon"
                 className="social-icon"
               />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/lyk.luk/" target="_blank">
               <img
                 src="./images/instagram-icon.svg"
                 alt="instagram icon"
                 className="social-icon"
               />
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/LykLuk-102466145797860" target="_blank">
               <img
                 src="./images/facebook-icon.svg"
                 alt="facebook icon"
                 className="social-icon"
               />
             </a>
-            <a href="">
+            <a href="" target="_blank">
               <img
                 src="./images/youtube-icon.svg"
                 alt="youtube icon"

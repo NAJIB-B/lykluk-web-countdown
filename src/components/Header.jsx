@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Header = () => {
-
   let activeClass = {
     color: "#8e00fe",
   };
@@ -21,7 +20,7 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/"
-                style={({isActive})=> isActive? activeClass: undefined}
+                style={({ isActive, isPending }) => (isActive ? activeClass : undefined)}
               >
                 Coming Soon
               </NavLink>
@@ -29,7 +28,7 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/about"
-                style={({isActive})=> isActive? activeClass: undefined}
+                style={({ isActive, isPending }) => (isActive ? activeClass : undefined)}
               >
                 About Us
               </NavLink>
@@ -37,7 +36,7 @@ const Header = () => {
             <li className="nav-item">
               <NavLink
                 to="/contact"
-                style={({isActive})=> isActive? activeClass: undefined}
+                style={({ isActive, isPending }) => (isActive ? activeClass : undefined)}
               >
                 Contact
               </NavLink>

@@ -12,19 +12,7 @@ const About = () => {
       .then((data) => setAboutImgs((prev) => data.results));
   }, []);
 
-  const firstDivImgs = aboutImgs.slice(0,3).map((img, index) => (<div key={index} className= {`img${index}`}><img src={img.urls.small} alt="" /></div>));
-
-  const secondDivImgs = aboutImgs.slice(3, 6).map((img, index) => (
-    <div key={index} className={`img${index}`}>
-      <img src={img.urls.small} alt="" />
-    </div>
-  ));
-
-  const thirdDivImgs = aboutImgs.slice(6, 9).map((img, index) => (
-    <div key={index} className={`img${index}`}>
-      <img src={img.urls.small} alt="" />
-    </div>
-  ));
+  const imagesGrid = aboutImgs.slice(0,8).map((img, index) => (<div key={index} className= {`hex${index}`}><img className="clip" src={img.urls.small} alt="" /></div>));
 
   return (
     <div className="about-page">
@@ -41,9 +29,7 @@ const About = () => {
             </p>
           </div>
           <div className="about-imgs">
-            <div className="first-grid">{firstDivImgs}</div>
-            <div className="second-grid">{secondDivImgs}</div>
-            <div className="third-grid">{thirdDivImgs}</div>
+            {imagesGrid}
           </div>
         </div>
       </div>
@@ -67,3 +53,22 @@ const About = () => {
 };
 
 export default About;
+
+
+// const firstDivImgs = aboutImgs.slice(0, 3).map((img, index) => (
+//   <div key={index} className={`img${index}`}>
+//     <img src={img.urls.small} alt="" />
+//   </div>
+// ));
+
+// const secondDivImgs = aboutImgs.slice(3, 6).map((img, index) => (
+//   <div key={index} className={`img${index}`}>
+//     <img src={img.urls.small} alt="" />
+//   </div>
+// ));
+
+// const thirdDivImgs = aboutImgs.slice(6, 9).map((img, index) => (
+//   <div key={index} className={`img${index}`}>
+//     <img src={img.urls.small} alt="" />
+//   </div>
+// ));

@@ -4,6 +4,8 @@ const Context = React.createContext("");
 const { Provider } = Context;
 
 const ContextProvider = (props) => {
+  
+// Create a countdown state
   const [countDown, setCountDown] = useState(() => ({
     days: 0,
     hours: 0,
@@ -17,6 +19,7 @@ const ContextProvider = (props) => {
     setIsActive(prev => !prev);
   };
 
+  // Updating countdown function
   const updateRemainingTime = (countDownDate) => {
     let distance = countDownDate.getTime() - new Date().getTime();
 
@@ -30,6 +33,7 @@ const ContextProvider = (props) => {
     setCountDown(prev => ({...prev, days: day, hours: hour, minutes: minute, seconds: second}))
   };
 
+  // Effect for updating countdown per second
   useEffect(() => {
     const interval = setInterval(() => {
       updateRemainingTime(new Date("Oct 17, 2022"));
