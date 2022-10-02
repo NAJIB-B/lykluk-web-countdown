@@ -376,7 +376,7 @@ main small {
 }
 
 .about-imgs div {
-  border: 5px solid;
+  border: 5px solid rgba(144, 0, 254, 0.3);
 }
 
 
