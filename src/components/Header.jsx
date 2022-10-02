@@ -12,11 +12,13 @@ const Header = () => {
     <header className="header">
       <div className="container header-container">
         <div className="logo">
-          <img
-            src="./images/lykluk_logo.svg"
-            alt="lykluk logo"
-            className="logo-img"
-          />
+          <NavLink to="/">
+            <img
+              src="./images/lykluk_logo.svg"
+              alt="lykluk logo"
+              className="logo-img"
+            />
+          </NavLink>
         </div>
         <nav className="nav">
           <ul className="nav-items">
