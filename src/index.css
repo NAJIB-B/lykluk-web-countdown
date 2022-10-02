@@ -49,7 +49,9 @@ body {
   padding: 0;
   line-height: 1.6;
   font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
-  /* font-weight: 400; */
+  font-weight: 400;
+  /* background: url("./images/bg.jpg") no-repeat;
+  background-size: cover; */
 }
 
 .container {
@@ -109,7 +111,6 @@ a {
 /* Home */
 
 .home-page {
-  height: 100vh;
 }
 
 .video-bg {
@@ -512,6 +513,8 @@ main small {
   .video-bg {
     width: auto;
     height: 100%;
+    bottom: 0;
+    left: 0;
   }
 }
 

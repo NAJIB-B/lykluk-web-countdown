@@ -51,7 +51,7 @@ const Home = () => {
 
 
   return (
-    <div className="home">
+    <div className="home-page">
       <Video />
       <main className="main">
         <section className="countdown-timer">
@@ -105,14 +105,14 @@ const Home = () => {
         </section>
         <section className="social">
           <div className="social-media-icons">
-            <a href="" target="_blank">
+            <a href="#" target="_blank">
               <img
                 src="./images/twitter-icon.svg"
                 alt="twitter icon"
                 className="social-icon"
               />
             </a>
-            <a href="https://www.instagram.com/lyk.luk/" target="_blank">
+            <a href="#" target="_blank">
               <img
                 src="./images/instagram-icon.svg"
                 alt="instagram icon"
@@ -126,7 +126,7 @@ const Home = () => {
                 className="social-icon"
               />
             </a>
-            <a href="" target="_blank">
+            <a href="#" target="_blank">
               <img
                 src="./images/youtube-icon.svg"
                 alt="youtube icon"
