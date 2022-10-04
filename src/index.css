@@ -207,8 +207,8 @@ a {
 }
 
 main small {
-  color: white;
-  text-shadow: 1px 1px 1px black;
+  color: black;
+  text-shadow: 1px 1px 1px white;
   /* background-image: var(--primary-color);
   background-clip: text; */
 }
@@ -522,7 +522,11 @@ main small {
   }
 } */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
  
   .home-page {
   }
@@ -536,7 +540,7 @@ main small {
 }
 
 .countdown-heading h1 {
-  font-size: 1.5rem
+  font-size: 1.6rem;
 }
 
 .clock-icon {
@@ -648,7 +652,7 @@ main small {
 }
 
 .about h1 {
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .about-imgs div {
@@ -674,9 +678,9 @@ main small {
   flex-direction: column;
 }
 
-.about-stores img {
+/* .about-stores img {
   width: 150px;
-}
+} */
 
 
 /* Footer */

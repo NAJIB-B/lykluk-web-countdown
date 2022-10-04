@@ -94,7 +94,7 @@ const Footer = () => {
             <h5>Legal</h5>
             <ul>
               <li>
-                <a href="">Terms of Servcice</a>
+                <a href="">Terms of Service</a>
               </li>
               <li>
                 <a href="">Privacy Policy</a>
