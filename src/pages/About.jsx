@@ -18,7 +18,6 @@ const About = () => {
 
   return (
     <div className="about-page">
-      <div className="overlay"></div>
       <div className="container about-container">
         <div className="about">
           <div className="about-text">

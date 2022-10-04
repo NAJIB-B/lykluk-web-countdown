@@ -30,7 +30,7 @@ const Header = () => {
                 }
                 end
               >
-                Coming Soon
+                Home
               </NavLink>
             </li>
             <li className="nav-item">
@@ -40,7 +40,7 @@ const Header = () => {
                   isActive ? activeClass : undefined
                 }
               >
-                About Us
+                About
               </NavLink>
             </li>
             <li className="nav-item">

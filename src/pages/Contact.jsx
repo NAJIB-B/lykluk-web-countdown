@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 const Contact = () => {
   return (
     <div className="contact-page">
-      <div className="overlay"></div>
       <div className="container contact-page-container">
         <h1>Contact Us</h1>
         <div className="contact-us">

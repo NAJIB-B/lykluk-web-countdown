@@ -1,3 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  /* background: url("./images/bg.jpg") no-repeat;
+  background-size: cover; */
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 :root {
   font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -38,22 +57,6 @@ button {
   transition: border-color 0.25s;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  /* background: url("./images/bg.jpg") no-repeat;
-  background-size: cover; */
-}
-
 .container {
   max-width: 85vw;
   width: 85vw;
@@ -69,6 +72,7 @@ body {
   bottom: 0;
   z-index: 0;
 } */
+
 
 .header-container {
   padding-top: 1em;
@@ -110,8 +114,7 @@ a {
 
 /* Home */
 
-.home-page {
-}
+
 
 .video-bg {
   position: absolute;
@@ -120,7 +123,7 @@ a {
   bottom: 0;
   right: 0;
   z-index: -1;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 
@@ -376,9 +379,8 @@ main small {
 }
 
 .about-imgs div {
-  border: 5px solid rgba(0, 0, 0, 0.4);
+  border: 5px solid rgba(0, 0, 0, 1);
 }
-
 
 .hex0 {
   grid-area: g0;
@@ -501,11 +503,12 @@ main small {
   line-height: 1.6;
   color: black;
 }
-
+/* 
 @media (min-aspect-ratio: 16/9) {
   .video-bg {
     width: 100%;
     height: auto;
+  
   }
 }
 
@@ -515,6 +518,219 @@ main small {
     height: 100%;
     bottom: 0;
     left: 0;
+  
   }
+} */
+
+@media screen and (max-width: 600px) {
+ 
+  .home-page {
+  }
+
+  .container {
+    max-width: 95vw;
+  }
+
+.logo-img {
+  width: 50px;
 }
 
+.countdown-heading h1 {
+  font-size: 1.5rem
+}
+
+.clock-icon {
+  width: 1.5em;
+}
+
+.timer {
+  justify-content: center;
+}
+
+.timer h4 {
+  font-size: .8em;
+}
+
+.timer-cards {
+  font-size: 1.5em;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.waitlist form {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.form-inp,
+.form-btn {
+  padding: .7em 2em;
+}
+
+.form-inp {
+  border-radius: 0.2em 0 0 0.2em;
+  width: 60%;
+}
+
+.form-btn {
+  border-radius: 0 0.2em 0.2em 0;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.social {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.social-media-icons {
+  width: 10px;
+}
+
+.downloads {
+  gap: 1em;
+}
+
+
+/* Contact */
+
+.contact-page {
+  /* width: %; */
+}
+
+.contact-page h1 {
+  font-size: 1.5em;
+}
+
+.contact-us {
+  padding: 1em 0 2em 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts,
+.contact-form {
+  width: 90%;
+}
+
+/* About */
+.about-page {
+  width: 100%;
+}
+
+.about {
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-text {
+  max-width: 100%;
+  order: 2;
+}
+
+.about-imgs {
+  padding: 0;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 1fr;
+  grid-template-areas: 
+    "g0 g1 g2"
+    "g3 . g4 "
+    "g5 g6 g7"        
+  ;
+  justify-content: space-evenly;
+  gap: 1em;
+  row-gap: 1em;
+  width: 100%;
+  order: 3;
+}
+
+.about h1 {
+  font-size: 1.5em;
+}
+
+.about-imgs div {
+  border: none;
+}
+
+.hex1 {
+  transform: translateY(50%)
+}
+
+.hex6 {
+  transform: translateY(-50%)
+}
+
+
+.clip {
+  clip-path: none;
+  transform: scale(.9);
+  border-radius: 5px;
+}
+
+.about-stores {
+  flex-direction: column;
+}
+
+.about-stores img {
+  width: 150px;
+}
+
+
+/* Footer */
+
+.footer {
+  padding: 1em 0 2em;
+  background-color: white;
+}
+
+.footer-container {
+  gap: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo-div {
+  gap: 1em;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1em;
+}
+
+.footer-social-icons img {
+  width: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.footer-links h5 {
+  margin-bottom: 0;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links-list a {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.6;
+  color: black;
+}
+
+}
