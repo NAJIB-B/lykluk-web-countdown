@@ -208,6 +208,9 @@ a {
 
 main small {
   color: black;
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
   text-shadow: 1px 1px 1px white;
   /* background-image: var(--primary-color);
   background-clip: text; */
