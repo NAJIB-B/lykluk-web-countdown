@@ -56,12 +56,12 @@ const Home = () => {
       <main className="main">
         <section className="countdown-timer">
           <div className="countdown-heading">
-            <h1>Countdown to Launch</h1>
-            <img
+            <h1>Put your creativity on the spotlight</h1>
+            {/* <img
               src="./images/clock-icon.svg"
               alt="clock icon"
               className="clock-icon"
-            />
+            /> */}
           </div>
           <div className="timer" id="timer">
             <div>
@@ -105,7 +105,7 @@ const Home = () => {
         </section>
         <section className="social">
           <div className="social-media-icons">
-            <a href="#" target="_blank">
+            <a href="https://twitter.com/lyklukdigital" target="_blank">
               <img
                 src="./images/twitter-icon.svg"
                 alt="twitter icon"
@@ -119,7 +119,10 @@ const Home = () => {
                 className="social-icon"
               />
             </a>
-            <a href="https://www.facebook.com/LykLuk-102466145797860" target="_blank">
+            <a
+              href="https://www.facebook.com/LykLuk-102466145797860"
+              target="_blank"
+            >
               <img
                 src="./images/facebook-icon.svg"
                 alt="facebook icon"

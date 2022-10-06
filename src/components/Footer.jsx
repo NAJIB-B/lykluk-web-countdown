@@ -11,28 +11,28 @@ const Footer = () => {
             />
           </div>
           <div className="footer-social-icons">
-            <a href="">
+            <a href="https://twitter.com/lyklukdigital">
               <img
                 src="./images/twitter-icon.svg"
                 alt="twitter icon"
                 className="social-icon"
               />
             </a>
-            <a href="">
+            <a href="#">
               <img
                 src="./images/instagram-icon.svg"
                 alt="instagram icon"
                 className="social-icon"
               />
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/LykLuk-102466145797860">
               <img
                 src="./images/facebook-icon.svg"
                 alt="facebook icon"
                 className="social-icon"
               />
             </a>
-            <a href="">
+            <a href="#">
               <img
                 src="./images/youtube-icon.svg"
                 alt="youtube icon"
