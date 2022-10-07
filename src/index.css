@@ -315,6 +315,10 @@ main small {
   margin-bottom: 0.5em;
 }
 
+iframe {
+  width: 100%;
+}
+
 .contact-form input[type="email"],
 .contact-form textarea {
   display: block;
