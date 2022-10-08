@@ -63,15 +63,15 @@ button {
   margin: 0 auto;
 }
 
-/* .overlay {
+.overlay {
   background: rgba(144, 0, 254, 0.1);
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -200px;
+  right: -200px;
   bottom: 0;
-  z-index: 0;
-} */
+  z-index: -1;
+}
 
 
 .header-container {
@@ -356,14 +356,15 @@ iframe {
 
 .about-page {
   background: rgba(144, 0, 254, 0.1);
-  position: relative;
 }
 
 .about {
+   position: relative;
   display: flex;
   justify-content: space-between;
   padding: 2em 0;
   gap: 2em;
+
 }
 
 .about-text {
