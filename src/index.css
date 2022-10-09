@@ -388,10 +388,6 @@ iframe {
   width: 50%;
 }
 
-.about-imgs div {
-  border: 5px solid rgba(0, 0, 0, 1);
-}
-
 .hex0 {
   grid-area: g0;
 }

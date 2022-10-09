@@ -12,7 +12,7 @@ const Video = () => {
   return (
     <div className="video">
       <video
-        src="./images/beach.mp4"
+        src="./images/beach1.mp4"
         autoPlay
         loop
         muted
