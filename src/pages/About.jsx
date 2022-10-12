@@ -53,9 +53,6 @@ const About = () => {
           <div className="download-store">
             <img src="./images/applestore.svg" alt="app banner" />
           </div>
-          <div className="download-store">
-            <img src="./images/microsoftstore.svg" alt="app banner" />
-          </div>
         </div>
       </div>
       <Footer />

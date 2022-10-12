@@ -250,7 +250,6 @@ main small {
 
 .download-store img {
   border-radius: 4px;
-  box-shadow: 2px 2px 2px white;
   cursor: pointer;
 }
 
@@ -466,6 +465,7 @@ iframe {
 .footer-container {
   display: flex;
   gap: 4em;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -486,7 +486,7 @@ iframe {
 
 .footer-links {
   display: flex;
-  gap: 4em;
+  gap: 8em;
 }
 
 .footer-links h5 {
@@ -528,7 +528,7 @@ iframe {
   }
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
 
   body {
     font-size: 14px;
@@ -719,7 +719,7 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1em;
+  gap: .2em;
 }
 
 .footer-links h5 {
