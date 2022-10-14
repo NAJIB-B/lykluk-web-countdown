@@ -53,6 +53,16 @@ const Header = () => {
                 Contact
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/privacy-policy"
+                style={({ isActive, isPending }) =>
+                  isActive ? activeClass : undefined
+                }
+              >
+                Privacy Policy
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>

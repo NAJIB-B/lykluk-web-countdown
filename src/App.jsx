@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import { Context } from "./Context";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import Privacy from "./pages/Privacy";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="privacy-policy" element={<Privacy />} />
         </Routes>
       </div>
     </Router>
