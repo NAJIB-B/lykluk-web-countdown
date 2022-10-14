@@ -112,7 +112,7 @@ const Home = () => {
                 className="social-icon"
               />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://instagram.com/lyk.luk" target="_blank">
               <img
                 src="./images/instagram-icon.svg"
                 alt="instagram icon"

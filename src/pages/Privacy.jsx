@@ -31,7 +31,7 @@ const Privacy = () => {
                 <span>
                   <span>
                     <span style={{color: "#232323"}}>
-                      is committed to Privacy protection. This
+                       is committed to Privacy protection. This 
                       <strong>Privacy policy</strong> details the collection,
                       use and sharing of <strong>Personal data</strong> from
                       users.

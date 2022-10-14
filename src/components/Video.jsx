@@ -2,13 +2,6 @@ import { useContext, useState, useEffect } from "react";
 
 const Video = () => {
 
-  useEffect(() => {
-    fetch(`https://sheet.best/api/sheets/d908cf8a-47a5-4249-9031-d6db0c0893c8`)
-      .then(res => res.json())
-      .then(data => console.log(data))
-  },[])
-  
-
   return (
     <div className="video">
       <video

@@ -18,7 +18,7 @@ const Footer = () => {
                 className="social-icon"
               />
             </a>
-            <a href="#">
+            <a href="https://instagram.com/lyk.luk">
               <img
                 src="./images/instagram-icon.svg"
                 alt="instagram icon"

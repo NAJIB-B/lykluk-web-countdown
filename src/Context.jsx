@@ -4,14 +4,16 @@ const Context = React.createContext("");
 const { Provider } = Context;
 
 const ContextProvider = (props) => {
-  
-// Create a countdown state
+  // Create a countdown state
   const [countDown, setCountDown] = useState(() => ({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   }));
+
+  // Creating a screenSize state
+  const [screenSize, setScreenSize] = useState(() => window.innerWidth);
 
   // Updating countdown function
   const updateRemainingTime = (countDownDate) => {
@@ -24,7 +26,13 @@ const ContextProvider = (props) => {
     let minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let second = Math.floor((distance % (1000 * 60)) / 1000);
 
-    setCountDown(prev => ({...prev, days: day, hours: hour, minutes: minute, seconds: second}))
+    setCountDown((prev) => ({
+      ...prev,
+      days: day,
+      hours: hour,
+      minutes: minute,
+      seconds: second,
+    }));
   };
 
   // Effect for updating countdown per second
@@ -35,7 +43,18 @@ const ContextProvider = (props) => {
     return () => clearInterval(interval);
   }, []);
 
-  return <Provider value={{countDown}}>{props.children}</Provider>;
+  // Setting the screenSize state to the window width and cleanup
+  useState(() => {
+    window.addEventListener("resize", () => {
+      setScreenSize(window.innerWidth);
+    });
+    return () =>
+      window.removeEventListener("resize", () => {
+        setScreenSize(window.innerWidth);
+      });
+  }, []);
+
+  return <Provider value={{ countDown, screenSize }}>{props.children}</Provider>;
 };
 
 export { ContextProvider, Context };
