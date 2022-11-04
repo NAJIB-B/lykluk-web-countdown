@@ -12,10 +12,6 @@ const Header = () => {
     color: "#8e00fe",
   };
 
-  // const styles = {
-  //   display: showNav? "flex" : "none",
-  // };
-
   const addShowNav = () => {
     setShowNav((prev) => true);
     navRef.current.classList.add("nav-show");
@@ -82,13 +78,13 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/about"
+                to="/features"
                 style={({ isActive, isPending }) =>
                   isActive ? activeClass : undefined
                 }
                 onClick={removeShowNav}
               >
-                About
+                Features
               </NavLink>
             </li>
             <li className="nav-item">
