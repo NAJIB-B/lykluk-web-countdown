@@ -38,7 +38,7 @@ const ContextProvider = (props) => {
   // Effect for updating countdown per second
   useEffect(() => {
     const interval = setInterval(() => {
-      updateRemainingTime(new Date("Nov 14, 2022"));
+      updateRemainingTime(new Date("Dec 1, 2022"));
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -54,7 +54,9 @@ const ContextProvider = (props) => {
       });
   }, []);
 
-  return <Provider value={{ countDown, screenSize }}>{props.children}</Provider>;
+  return (
+    <Provider value={{ countDown, screenSize }}>{props.children}</Provider>
+  );
 };
 
 export { ContextProvider, Context };

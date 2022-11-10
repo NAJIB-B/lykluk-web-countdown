@@ -31,28 +31,24 @@ body {
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
-
-
-
-
 @keyframes in {
- 0% {
-  opacity: 0;
-  top: 100px;
- }
- 25% {
-  opacity: 1;
-  top: 0;
- }
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  25% {
+    opacity: 1;
+    top: 0;
+  }
 
- 75% {
-  opacity: 1;
-  top: 0;
- }
-100% {
-  opacity: 0;
-  top: 100px;
-}
+  75% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 100px;
+  }
 }
 
 :root {
@@ -102,13 +98,12 @@ button {
 }
 
 .features-icon {
-  @apply bg-gray-300 p-2 rounded-full w-10 h-10
+  @apply bg-gray-300 p-2 rounded-full w-10 h-10;
 }
 
 .timer-cards {
-  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary_lite
+  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary_lite;
 }
-
 
 .overlay {
   background: rgba(144, 0, 254, 0.1);
@@ -195,7 +190,6 @@ a {
   font-style: italic;
 }
 
-
 .timer {
   display: flex;
   gap: 2em;
@@ -236,8 +230,6 @@ a {
   background: black;
   position: relative;
 }
-
-
 
 main small {
   color: black;
@@ -392,13 +384,11 @@ iframe {
 }
 
 .features-main {
-   background: url("./images/features_kili.jpg");
-   background-position: center;
-   background-size: cover;
-   height: 100vh;
+  background: url("./images/features_kili.jpg");
+  background-position: center;
+  background-size: cover;
+  height: auto;
 }
-
-
 
 /* Footer */
 
@@ -497,10 +487,10 @@ iframe {
     z-index: 10;
     padding-top: 5em;
     gap: 3em;
-    animation: slide-in .6s linear;
+    animation: slide-in 0.6s linear;
   }
 
-  @keyframes slide-in{
+  @keyframes slide-in {
     from {
       right: -50vw;
     }
@@ -604,8 +594,6 @@ iframe {
   .features-page {
     width: 100%;
   }
-
-  
 
   /* .about-stores img {
   width: 150px;
