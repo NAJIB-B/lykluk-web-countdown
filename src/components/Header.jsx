@@ -5,6 +5,7 @@ import { Context } from "../Context";
 const Header = () => {
   const navRef = useRef();
 
+  const { pathname } = useLocation();
   const [showNav, setShowNav] = useState(() => false);
 
   const { screenSize } = useContext(Context);
@@ -47,9 +48,13 @@ const Header = () => {
   );
 
   return (
-    <header className="header">
+    <header
+      className={
+        pathname === "/features" ? "header col-start-1 col-end-4" : "header"
+      }
+    >
       <div className="container header-container">
-        <div className="logo">
+        <div className="logo z-40">
           <NavLink to="/" onClick={removeShowNav}>
             <img
               src="./images/lykluk_logo.svg"
@@ -58,7 +63,7 @@ const Header = () => {
             />
           </NavLink>
         </div>
-        <nav className="nav">
+        <nav className="nav z-40">
           <ul
             className={"nav-items"}
             // style={ styles }

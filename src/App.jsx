@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Features from "./pages/Features";
@@ -11,10 +11,11 @@ import Footer from "./components/Footer";
 import Privacy from "./pages/Privacy";
 
 function App() {
+
   return (
     <Router>
       <div className="App">
-        <Header />
+        {/* <Header/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="features" element={<Features />} />
