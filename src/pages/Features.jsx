@@ -18,29 +18,21 @@ const FeaturesHero = () => {
   }, []);
 
   // Hero text Carousel animation text
-  let carouselText;
+  let carouselImg;
 
   switch (count) {
     case 0:
-      carouselText = <span className="activate">Likes</span>;
+      carouselImg = <img src="./images/likes-carousel.svg" alt="likes" className="activate w-16" />;
       break;
     case 1:
-      carouselText = <span className="activate">Reels</span>;
+      carouselImg = <img src="./images/reels-carousel.svg" alt="reels" className="activate w-16" />;
       break;
     case 2:
-      carouselText = <span className="activate">Share</span>;
+      carouselImg = <img src="./images/share-carousel.svg" alt="share" className="activate w-16" />;
       break;
     case 3:
-      carouselText = (
-        <span className="activate carousel-text text-7xl font-medium">
-          <span className="carousel-text-main font-bold font-hero_text2">
-            LYK
-          </span>
-          <span className="carousel-text-main font-hero_text2 font-bold text-primary">
-            LUK
-          </span>
-        </span>
-      );
+      carouselImg = <img src="./images/lykluk-carousel.svg" alt="lykluk" className="activate w-16" />;
+      
   }
 
   // Receiving countdown state from  context
@@ -95,7 +87,7 @@ const FeaturesHero = () => {
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4">
             <h1 className="carousel-text text-7xl font-medium">
-              {carouselText}
+              {carouselImg}
             </h1>
           </div>
           <div className="hero-text">
