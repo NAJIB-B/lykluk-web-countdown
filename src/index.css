@@ -106,7 +106,7 @@ button {
 }
 
 .timer-cards {
-  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary_lite
+  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary animate-pulse
 }
 
 

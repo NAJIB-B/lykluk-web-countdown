@@ -18,21 +18,29 @@ const FeaturesHero = () => {
   }, []);
 
   // Hero text Carousel animation text
-  let carouselImg;
+  let carouselText;
 
   switch (count) {
     case 0:
-      carouselImg = <img src="./images/likes-carousel.svg" alt="likes" className="activate w-16" />;
+      carouselText = <span className="activate font-medium bg-gradient bg-clip-text text-transparent">Likes</span>;
       break;
     case 1:
-      carouselImg = <img src="./images/reels-carousel.svg" alt="reels" className="activate w-16" />;
+      carouselText = <span className="activate font-medium bg-gradient bg-clip-text text-transparent">Reels</span>;
       break;
     case 2:
-      carouselImg = <img src="./images/share-carousel.svg" alt="share" className="activate w-16" />;
+      carouselText = <span className="activate font-medium bg-gradient bg-clip-text text-transparent">Share</span>;
       break;
     case 3:
-      carouselImg = <img src="./images/lykluk-carousel.svg" alt="lykluk" className="activate w-16" />;
-      
+      carouselText = (
+        <span className="activate carousel-text font-medium">
+          <span className="carousel-text-main  ">
+            LYK
+          </span>
+          <span className="carousel-text-main text-primary">
+            LUK
+          </span>
+        </span>
+      );
   }
 
   // Receiving countdown state from  context
@@ -87,7 +95,7 @@ const FeaturesHero = () => {
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4">
             <h1 className="carousel-text text-7xl font-medium">
-              {carouselImg}
+              {carouselText}
             </h1>
           </div>
           <div className="hero-text">
@@ -210,6 +218,46 @@ const Features = () => (
     </section>
     <div className="features-main relative">
       <Overlay />
+    </div>
+    <div className="features-gallery grid lg:grid-cols-5 relative">
+      <div>
+        <img
+          src="./images/features_1.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_2.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_3.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_4.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_5.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div className="features-gallery-header absolute inset-0 flex items-center justify-center">
+        <h2 className="text-5xl text-white font-montserrat font-bold">Put your creativity in the spotlight</h2>
+      </div>
     </div>
     <Footer />
   </div>
