@@ -330,6 +330,48 @@ const Features = () => (
       <img src={frame4} alt="" className="float-left w-[20%] p-0 m-0" />
       <img src={frame2} alt="" className="float-left w-[20%] p-0 m-0" />
     </div>
+    <div className="features-gallery grid lg:grid-cols-5 relative">
+      <div>
+        <img
+          src="./images/features_1.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_2.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_3.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_4.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/features_5.jpg"
+          alt=""
+          className="object-cover h-full"
+        />
+      </div>
+      <div className="features-gallery-header absolute inset-0 flex items-center justify-center">
+        <h2 className="text-5xl text-white font-montserrat font-bold">
+          Put your creativity in the spotlight
+        </h2>
+      </div>
+    </div>
     <Footer />
   </div>
 );
