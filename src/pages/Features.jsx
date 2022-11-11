@@ -12,6 +12,10 @@ import frame1 from "../assets/frame1.png";
 import frame2 from "../assets/frame2.png";
 import frame3 from "../assets/frame3.png";
 import frame4 from "../assets/frame4.png";
+import likes from "../assets/Likes.png";
+import share from "../assets/Share.png";
+import reels from "../assets/Reels.png";
+import lykluk from "../assets/logo 3.png";
 
 const FeaturesHero = () => {
   const carouselRef = useRef();
@@ -116,12 +120,18 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container lg:flex gap-52 py-16">
+      <div className="container flex small:flex-col gap-52 py-16">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
-          <div className="carousel relative py-4">
-            <h1 className="carousel-text text-7xl font-medium">
+          {/* <div className="carousel relative py-4">
+             <h1 className="carousel-text text-7xl font-medium">
               {carouselImg}
-            </h1>
+            </h1> 
+          </div> */}
+          <div className="imagesAnimationDiv">
+            <img src={lykluk} alt="" className="lykluk" />
+            <img src={likes} alt="" className="likes" />
+            <img src={reels} alt="" className="reels" />
+            <img src={share} alt="" className="share" />
           </div>
           <div className="hero-text">
             <p>
@@ -184,7 +194,7 @@ const FeaturesHero = () => {
             </div>
           </div>
         </div>
-        <div className="features-hero-img flex flex-col gap-8">
+        <div className="features-hero-img  m-auto flex flex-col gap-8 small:mt-[-15rem]">
           <img
             src="./images/screen_hero.svg"
             alt="lykluk screen image"

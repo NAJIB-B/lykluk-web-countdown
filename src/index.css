@@ -445,6 +445,62 @@ iframe {
   line-height: 1.6;
   color: black;
 }
+/* lykluk animation on coming soon page */
+.imagesAnimationDiv {
+  position: relative;
+  overflow: hidden;
+  height: 110px;
+}
+.lykluk {
+  position: absolute;
+
+  left: -34px;
+  top: 120px;
+  animation: lykluk 5.45s linear infinite alternate;
+}
+.likes {
+  position: absolute;
+
+  top: 120px;
+  animation: lykluk 5.45s linear infinite alternate;
+  animation-delay: 2.8s;
+}
+.reels {
+  position: absolute;
+
+  top: 120px;
+  animation: lykluk 5.45s linear infinite alternate;
+  animation-delay: 5.6s;
+}
+.share {
+  position: absolute;
+
+  top: 120px;
+
+  animation: lykluk 5.45s linear infinite alternate;
+  animation-delay: 8.3s;
+}
+@keyframes lykluk {
+  0% {
+    top: 0px;
+
+    display: none;
+  }
+
+  20% {
+    top: 0px;
+    display: block;
+  }
+  25% {
+    top: 120px;
+    display: block;
+  }
+
+  100% {
+    top: 120px;
+    visibility: hidden;
+  }
+}
 /* 
 @media (min-aspect-ratio: 16/9) {
   .video-bg {
