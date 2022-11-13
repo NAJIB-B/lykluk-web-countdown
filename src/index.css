@@ -13,62 +13,63 @@ body {
   line-height: 1.6;
   font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  /* background: url("./images/bg.jpg") no-repeat;
-  background-size: cover; */
   width: 100vw;
   max-width: 100%;
+  height: 100%;
   overflow-x: hidden;
+
+}
+.carousel-text {
+  position: relative;
+  height: 80px;
 }
 
 .carousel {
   overflow: hidden;
 }
 
-.activate {
-  transition: all 0.5s linear;
-  animation: in 4s linear 0s infinite;
-  position: relative;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+.anim-a {
+  animation: in 4s linear infinite alternate;
+  position: absolute;
+  bottom: -100px;
 }
-
-
-
-
+.anim-b {
+  animation: in 4s linear infinite alternate;
+  position: absolute;
+  bottom: -100px;
+  animation-delay: 2s;
+}
+.anim-c {
+  animation: in 4s linear infinite alternate;
+  position: absolute;
+  bottom: -100px;
+  animation-delay: 6s;
+}
+.anim-d {
+  animation: in 4s linear infinite alternate;
+  position: absolute;
+  bottom: -100px;
+  animation-delay: 8s;
+}
 
 @keyframes in {
  0% {
-  opacity: 0;
-  top: 100px;
+  display: none;
+  bottom: -100px;
  }
  25% {
-  opacity: 1;
-  top: 0;
+  display: block;
+  bottom: 0;
  }
 
- 75% {
-  opacity: 1;
-  top: 0;
+  75% {
+  display: block;
+  bottom: 0;
  }
 100% {
-  opacity: 0;
-  top: 100px;
-}
-}
-
-:root {
-  font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  /* color-scheme: light dark; */
-  --primary-color: #8e00fe;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  visibility: hidden;
+  bottom: -100px;
+} 
 }
 
 a {
@@ -109,6 +110,10 @@ button {
   @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary animate-pulse
 }
 
+.frames {
+  @apply z-50 absolute
+}
+
 
 .overlay {
   background: rgba(144, 0, 254, 0.1);
@@ -131,6 +136,7 @@ button {
 
 .logo-img {
   width: 70px;
+
 }
 
 .nav {
@@ -166,36 +172,6 @@ a {
 
 /* Home */
 
-.video-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  object-fit: cover;
-}
-
-.main {
-  display: grid;
-  justify-content: center;
-  gap: 2em;
-  text-align: center;
-  padding-top: 4em;
-}
-
-.countdown-heading {
-  font-size: 1.2rem;
-  display: flex;
-  gap: 0.5em;
-  align-items: baseline;
-  justify-content: center;
-  color: var(--primary-color);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.611);
-  font-style: italic;
-}
-
-
 .timer {
   display: flex;
   gap: 2em;
@@ -205,11 +181,6 @@ a {
   color: #fff;
   text-shadow: 1px 1px 1px black;
   margin: 0;
-}
-
-.waitlist {
-  display: grid;
-  gap: 0.5em;
 }
 
 .form-inp,
@@ -226,7 +197,6 @@ a {
 
 .form-btn {
   width: 40%;
-  background-color: var(--primary-color);
   color: white;
   cursor: pointer;
   position: relative;
@@ -237,61 +207,16 @@ a {
   position: relative;
 }
 
-
-
-main small {
-  color: black;
-  max-width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
-}
-
-.social {
-  display: grid;
-  gap: 1em;
-}
-
-.social-media-icons {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  gap: 1em;
-  width: 20px;
-}
-
-.social-media-icons img {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-}
-
-.social-media-icons img:hover {
-  transform: scale(1.1);
-  /* background-color: #9000fe54; */
-}
-
-.downloads {
-  display: flex;
-  justify-content: center;
-  gap: 3em;
-  align-items: center;
-}
-
-.download-store img {
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 /* Contact */
 .contact-page {
-  padding: 1em 0 0 0;
+  padding: 0;
   background: rgba(144, 0, 254, 0.1);
   position: relative;
 }
 
 .contact-page h1 {
   text-align: center;
-  margin-bottom: 1em;
+  margin-top: 2em;
 }
 
 .contact-us {
@@ -330,11 +255,6 @@ main small {
   margin-bottom: -0.7em;
 }
 
-.contacts ul {
-  list-style: none;
-  padding-left: 0;
-}
-
 .address {
   display: flex;
   align-items: center;
@@ -362,8 +282,6 @@ iframe {
   background-color: var(--primary-color);
   margin: 0 auto;
   color: white;
-  font-weight: 500;
-  font-family: "Rubik", "Poppins", Helvetica, Arial, sans-serif;
   padding: 0.8em 1.3em;
   border-radius: 1em;
   border: none;
@@ -380,23 +298,6 @@ iframe {
   width: 20px;
 }
 
-/* Features */
-
-.features-page {
-  /* background: rgba(144, 0, 254, 0.1); */
-}
-
-.features-hero {
-  background: url("./images/features_hero.jpg");
-  /* height: 100vh; */
-}
-
-.features-main {
-   background: url("./images/features_kili.jpg");
-   background-position: center;
-   background-size: cover;
-   height: 100vh;
-}
 
 
 
@@ -417,7 +318,6 @@ iframe {
 .footer-logo-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1em;
 }
 
@@ -455,24 +355,7 @@ iframe {
   line-height: 1.6;
   color: black;
 }
-/* 
-@media (min-aspect-ratio: 16/9) {
-  .video-bg {
-    width: 100%;
-    height: auto;
-  
-  }
-}
 
-@media (max-aspect-ratio: 16/9) {
-  .video-bg {
-    width: auto;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-  
-  }
-} */
 
 @media screen and (max-width: 968px) {
   body {
@@ -508,26 +391,7 @@ iframe {
       right: 0;
     }
   }
-
-  .home-page {
-  }
-
-  .container {
-    max-width: 95vw;
-  }
-
-  .logo-img {
-    width: 50px;
-  }
-
-  .countdown-heading h1 {
-    font-size: 1.6rem;
-  }
-
-  .clock-icon {
-    width: 1.5em;
-  }
-
+  
   .timer {
     justify-content: center;
   }
@@ -542,12 +406,6 @@ iframe {
     height: 50px;
     border-radius: 5px;
   }
-
-  /* .waitlist form {
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-  } */
 
   .form-inp,
   .form-btn {
@@ -605,18 +463,12 @@ iframe {
     width: 100%;
   }
 
-  
-
-  /* .about-stores img {
-  width: 150px;
-} */
-
   /* Footer */
 
-  .footer {
+  /* .footer {
     padding: 1em 0 2em;
     background-color: white;
-  }
+  } */
 
   .footer-container {
     gap: 1em;
@@ -641,7 +493,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2em;
+    gap: 1em;
   }
 
   .footer-links h5 {
@@ -651,6 +503,7 @@ iframe {
   .footer-links-list {
     display: flex;
     flex-direction: column;
+    gap: .5em;
   }
 
   .footer-links-list ul {

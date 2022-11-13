@@ -28,8 +28,8 @@ const Header = () => {
       onClick={addShowNav}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="24"
-      height="24"
+      width="32"
+      height="32"
     >
       <path fill="none" d="M0 0h24v24H0z" />
       <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="#8e00fe" />
@@ -39,8 +39,8 @@ const Header = () => {
       onClick={removeShowNav}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="24"
-      height="24"
+      width="32"
+      height="32"
     >
       <path fill="none" d="M0 0h24v24H0z" />
       <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
@@ -49,17 +49,16 @@ const Header = () => {
 
   return (
     <header
-      className={
-        pathname === "/features" ? "header col-start-1 col-end-4" : "header"
-      }
+      className= "header py-4" 
+      style={{backgroundColor: pathname === "/contact"? "white": "transparent", paddingTop: pathname === "/contact"? "0" : "1em"}}
     >
       <div className="container header-container">
         <div className="logo z-40">
           <NavLink to="/" onClick={removeShowNav}>
             <img
-              src="./images/lykluk_logo.svg"
+              src="./images/logo.svg"
               alt="lykluk logo"
-              className="logo-img"
+              className="logo-img lg:w-28 relative -left-6"
             />
           </NavLink>
         </div>
@@ -78,18 +77,7 @@ const Header = () => {
                 end
                 onClick={removeShowNav}
               >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/features"
-                style={({ isActive, isPending }) =>
-                  isActive ? activeClass : undefined
-                }
-                onClick={removeShowNav}
-              >
-                Features
+                Coming Soon
               </NavLink>
             </li>
             <li className="nav-item">

@@ -2,46 +2,22 @@ import Footer from "../components/Footer";
 import { useState, useEffect, useContext, useRef } from "react";
 import Header from "../components/Header";
 import { Context } from "../Context";
+// import useLogic from "../useLogic.js";
+import { useInView } from "react-intersection-observer";
 
 const FeaturesHero = () => {
-  const carouselRef = useRef();
-
   // Declaring as count state for Carousel animation text
   const [count, setCount] = useState(() => 0);
 
   // Incrementing count
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prev) => (prev === 3 ? 0 : prev + 1));
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Hero text Carousel animation text
-  let carouselText;
-
-  switch (count) {
-    case 0:
-      carouselText = <span className="activate font-medium bg-gradient bg-clip-text text-transparent">Likes</span>;
-      break;
-    case 1:
-      carouselText = <span className="activate font-medium bg-gradient bg-clip-text text-transparent">Reels</span>;
-      break;
-    case 2:
-      carouselText = <span className="activate font-medium bg-gradient bg-clip-text text-transparent">Share</span>;
-      break;
-    case 3:
-      carouselText = (
-        <span className="activate carousel-text font-medium">
-          <span className="carousel-text-main  ">
-            LYK
-          </span>
-          <span className="carousel-text-main text-primary">
-            LUK
-          </span>
-        </span>
-      );
-  }
+  // useEffect(() => {
+  //   const interval = setTimeout(() => {
+  //     setCount((prev) => (prev === 3 ? 0 : prev + 1));
+  //   }, 4000);
+  //   return () => {
+  //     clearTimeout(interval);
+  //   };
+  // }, [count]);
 
   // Receiving countdown state from  context
   const { countDown } = useContext(Context);
@@ -93,11 +69,36 @@ const FeaturesHero = () => {
       <Header />
       <div className="container xl:flex gap-52 py-16">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
-          <div className="carousel relative py-4">
-            <h1 className="carousel-text text-7xl font-medium">
-              {carouselText}
+          <div className="carousel relative py-4 imagesAnimationDiv">
+            <h1 className="carousel-text text-8xl font-medium ">
+              <span className="font-medium bg-gradient bg-clip-text text-transparent likes">
+                Likes
+              </span>
+
+              <span className="font-medium bg-gradient bg-clip-text text-transparent reels">
+                Reels
+              </span>
+
+              <span className="font-medium bg-gradient bg-clip-text text-transparent share">
+                Share
+              </span>
+              <img
+                src={"./images/lykluk.svg"}
+                alt=""
+                className="lykluk w-[60%] -left-3 mb-[10em]"
+              />
+              {/* <span className="carousel-text font-medium lykluk">
+                <span className="carousel-text-main  ">LYK</span>
+                <span className="carousel-text-main text-primary">LUK</span>
+              </span> */}
             </h1>
           </div>
+          {/* <div className="imagesAnimationDiv">
+            <img src={lykluk} alt="" className="lykluk" />
+            <img src={likes} alt="" className="likes" />
+            <img src={reels} alt="" className="reels" />
+            <img src={share} alt="" className="share" />
+          </div> */}
           <div className="hero-text">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, vel
@@ -137,7 +138,7 @@ const FeaturesHero = () => {
               <input
                 type="submit"
                 value="Join the waitlist"
-                className="form-btn transition-all duration-1000 ease-linear animate-pulse form-control px-7 py-2 rounded-r-md"
+                className="form-btn transition-all duration-1000 ease-linear animate-pulse outline-none bg-primary relative form-control px-7 py-2 rounded-r-md"
               />
             </form>
             <small>
@@ -165,11 +166,11 @@ const FeaturesHero = () => {
             </div>
           </div>
         </div>
-        <div className="features-hero-img flex flex-col gap-8">
+        <div className="features-hero-img flex flex-col gap-8 items-center">
           <img
             src="./images/screen_hero.svg"
             alt="lykluk screen image"
-            className="max-w-xs relative"
+            className="max-w-xs relative hero-img"
           />
           <div className="stores flex gap-8 relative justify-center">
             <img src="./images/playstore.svg" alt="google playstore icon" />
@@ -182,8 +183,101 @@ const FeaturesHero = () => {
 };
 
 const Overlay = () => (
-  <div className="absolute bottom-0 right-0 left-0 top-0 bg-white opacity-90 "></div>
+  <div className="absolute bottom-0 right-0 left-0 top-0 bg-white opacity-80 "></div>
 );
+
+const FeaturesMain = () => {
+  const { ref: firstRef, inView: firstRefVisibility } = useInView({
+    root: null,
+    rootMargin: "50px",
+    threshold: 0.15,
+  });
+
+  const { ref: secondRef, inView: secondRefVisibility } = useInView({
+    root: null,
+    rootMargin: "50px",
+    threshold: 0.15,
+  });
+
+  const { ref: thirdRef, inView: thirdRefVisibility } = useInView({
+    root: null,
+    rootMargin: "50px",
+    threshold: 0.15,
+  });
+
+
+  return (
+    <section className="features-main relative">
+      <Overlay />
+      <div className="feature relative">
+        <img
+          src="./images/frame1.svg"
+          alt="mobile screen"
+          className={firstRefVisibility ? "screen1 screen" : "frames"}
+          ref={firstRef}
+        />
+        <img
+          src="./images/one.svg"
+          alt="mobile app screen features"
+          className="feature-screen z-40 relative"
+        />
+        <div className="feature-text">
+          <h3 className="font-semibold">Send Messages</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            laborum earum dignissimos architecto explicabo cupiditate aperiam
+            iusto aspernatur itaque animi ipsum ipsa eius enim dolor eveniet
+            culpa autem odit provident.
+          </p>
+        </div>
+      </div>
+      <div className="feature justify-end relative animate-second">
+        <img
+          src="./images/frame2.svg"
+          alt="mobile screen"
+          className={secondRefVisibility ? "screen2 screen" : "frames"}
+          ref={secondRef}
+        />
+        <img
+          src="./images/mid.svg"
+          alt="mobile app screen features"
+          className="feature-screen z-40 order-2 relative one"
+        />
+        <div className="feature-text two">
+          <h3 className="font-semibold">Share Videos</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            laborum earum dignissimos architecto explicabo cupiditate aperiam
+            iusto aspernatur itaque animi ipsum ipsa eius enim dolor eveniet
+            culpa autem odit provident.
+          </p>
+        </div>
+      </div>
+      <div className="feature relative three animate-third">
+        <img
+          src="./images/frame3.svg"
+          alt="mobile screen"
+          className={thirdRefVisibility ? "screen3 screen" : "frames"}
+          ref={thirdRef}
+        />
+        <img
+          src="./images/three.svg"
+          alt="mobile app screen features"
+          className="feature-screen z-40 relative feature-screen-3"
+        />
+        <div className="feature-text">
+          <h3 className="font-semibold">Make New Friends</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            laborum earum dignissimos architecto explicabo cupiditate aperiam
+            iusto aspernatur itaque animi ipsum ipsa eius enim dolor eveniet
+            culpa autem odit provident.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Features = () => (
   /* const [aboutImgs, setAboutImgs] = useState(() => []);*/ /* // Getting photos for the photo grid*/ /* useEffect(() => {*/ /*   fetch(*/ /*     "https://api.unsplash.com/search/photos/?&query=happy&orientation=portrait&client_id=hjRE5t2RVXBqp561CfadH4aoW5oMSuEhDXsDxFJJ_nU"*/ /*   )*/ /*     .then((res) => res.json())*/ /*     .then((data) => setAboutImgs((prev) => data.results));*/ /* }, []);*/ /* // Mapping over the photos*/ /* const imagesGrid = aboutImgs.slice(0,8).map((img, index) => (<div key={index} className= {`hex${index}`}><img className="clip" src={img.urls.small} alt="" /></div>));*/ <div className="features-page">
@@ -216,47 +310,47 @@ const Features = () => (
         </div>
       </div>
     </section>
-    <div className="features-main relative">
-      <Overlay />
-    </div>
-    <div className="features-gallery grid lg:grid-cols-5 relative">
+    <FeaturesMain />
+    <div className="features-gallery relative">
       <div>
         <img
           src="./images/features_1.jpg"
           alt=""
-          className="object-cover h-full"
+          className="object-cover h-full gallery-img"
         />
       </div>
       <div>
         <img
           src="./images/features_2.jpg"
           alt=""
-          className="object-cover h-full"
+          className="object-cover h-full gallery-img"
         />
       </div>
       <div>
         <img
           src="./images/features_3.jpg"
           alt=""
-          className="object-cover h-full"
+          className="object-cover h-full gallery-img"
         />
       </div>
       <div>
         <img
           src="./images/features_4.jpg"
           alt=""
-          className="object-cover h-full"
+          className="object-cover h-full gallery-img"
         />
       </div>
       <div>
         <img
           src="./images/features_5.jpg"
           alt=""
-          className="object-cover h-full"
+          className="object-cover h-full gallery-img"
         />
       </div>
-      <div className="features-gallery-header absolute inset-0 flex items-center justify-center">
-        <h2 className="text-5xl text-white font-montserrat font-bold">Put your creativity in the spotlight</h2>
+      <div className="features-gallery-header absolute inset-0 flex items-center justify-center text-center">
+        <h2 className="text-5xl text-white font-montserrat font-bold z-50 text-shadow">
+          Put your creativity in the spotlight
+        </h2>
       </div>
     </div>
     <Footer />

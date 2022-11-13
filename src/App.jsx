@@ -15,10 +15,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Header/> */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="features" element={<Features />} />
+          <Route path="/" element={<Features />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<Privacy />} />
         </Routes>

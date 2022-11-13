@@ -1,10 +1,12 @@
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Contact = () => {
   return (
     <div className="contact-page">
+      <Header />
       <div className="container contact-page-container">
-        <h1>Contact Us</h1>
+        <h1 className=" font-medium">Contact Us</h1>
         <div className="contact-us">
           <div className="contacts">
             <h3>Our Contacts</h3>
@@ -24,7 +26,6 @@ const Contact = () => {
             </span>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15857.872135727319!2d3.5453129608664544!3d6.46223464629185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf73c539f14bf%3A0x4612f9e85fdacf83!2sVGC%20Shopping%20Mall%2C%20Victoria%20garden%20City%20106104%2C%20Lekki!5e0!3m2!1sen!2sng!4v1665135875077!5m2!1sen!2sng"
-              
               style={{ border: "0" }}
               allowFullScreen=""
               loading="lazy"

@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <div className="footer-links-list">
-            <h5>Company</h5>
+            <h5 className="font-medium">Company</h5>
             <ul>
               <li>
                 <a href="">Contact</a>
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-links-list">
-            <h5>Programs</h5>
+            <h5 className="font-medium">Programs</h5>
             <ul>
               <li>
                 <a href="">Advertise</a>
@@ -74,7 +74,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-links-list">
-            <h5>Resources</h5>
+            <h5 className="font-medium">Resources</h5>
             <ul>
               <li>
                 <a href="">Help Center</a>
@@ -91,7 +91,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-links-list">
-            <h5>Legal</h5>
+            <h5 className="font-medium">Legal</h5>
             <ul>
               <li>
                 <a href="">Terms of Service</a>
