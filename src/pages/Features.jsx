@@ -67,7 +67,7 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container xl:flex gap-52 py-16">
+      <div className="container flex small:flex-col gap-52 py-16">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
             <h1 className="carousel-text text-8xl font-medium ">
@@ -110,12 +110,6 @@ const FeaturesHero = () => {
               consequuntur! Nam rem quas molestiae commodi voluptates, incidunt
               error deserunt in delectus, debitis nostrum nisi explicabo
               accusantium?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Exercitationem obcaecati, a nemo pariatur ratione incidunt tempore
-              non? Pariatur incidunt doloremque, beatae, voluptates ullam
-              architecto sint cum cupiditate perspiciatis, consequuntur cumque.
             </p>
           </div>
 

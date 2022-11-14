@@ -103,11 +103,11 @@ button {
 }
 
 .features-icon {
-  @apply bg-gray-300 p-2 rounded-full w-10 h-10
+  @apply bg-gray-300 p-2 rounded-full w-10 h-10;
 }
 
 .timer-cards {
-  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary animate-pulse
+  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary_lite;
 }
 
 .frames {
@@ -299,8 +299,6 @@ iframe {
 }
 
 
-
-
 /* Footer */
 
 .footer {
@@ -380,10 +378,10 @@ iframe {
     z-index: 10;
     padding-top: 5em;
     gap: 3em;
-    animation: slide-in .6s linear;
+    animation: slide-in 0.6s linear;
   }
 
-  @keyframes slide-in{
+  @keyframes slide-in {
     from {
       right: -50vw;
     }

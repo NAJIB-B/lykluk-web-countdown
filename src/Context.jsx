@@ -54,7 +54,9 @@ const ContextProvider = (props) => {
       });
   }, []);
 
-  return <Provider value={{ countDown, screenSize }}>{props.children}</Provider>;
+  return (
+    <Provider value={{ countDown, screenSize }}>{props.children}</Provider>
+  );
 };
 
 export { ContextProvider, Context };
