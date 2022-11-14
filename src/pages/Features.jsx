@@ -205,10 +205,10 @@ const FeaturesMain = () => {
     threshold: 0.15,
   });
 
-
   return (
     <section className="features-main relative">
       <Overlay />
+      <img src="./images/dotted_arrow.svg" alt="line" className="line absolute left-[50%] w-[35%]" />
       <div className="feature relative">
         <img
           src="./images/frame1.svg"
@@ -222,7 +222,11 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative"
         />
         <div className="feature-text">
-          <h3 className="font-semibold">Send Messages</h3>
+          <div className="flex flex-row-reverse justify-end items-center gap-6">
+            <img src="./images/messaging.svg" alt="messaging icon" className="w-[13%]" />
+            <h3 className="font-semibold">Send Messages</h3>
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
             laborum earum dignissimos architecto explicabo cupiditate aperiam
@@ -244,7 +248,11 @@ const FeaturesMain = () => {
           className="feature-screen z-40 order-2 relative one"
         />
         <div className="feature-text two">
-          <h3 className="font-semibold">Share Videos</h3>
+          <div className="flex flex-row-reverse justify-end items-center gap-6">
+            <img src="./images/sharing.svg" alt="share icon" className="w-[13%]" />
+            <h3 className="font-semibold">Share Videos</h3>
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
             laborum earum dignissimos architecto explicabo cupiditate aperiam
@@ -266,7 +274,10 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative feature-screen-3"
         />
         <div className="feature-text">
-          <h3 className="font-semibold">Make New Friends</h3>
+          <div className="flex flex-row-reverse justify-end items-center gap-6">
+            <img src="./images/add.svg" alt="add friends icon" className="w-[13%]" />
+            <h3 className="font-semibold">Make New Friends</h3>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
             laborum earum dignissimos architecto explicabo cupiditate aperiam
