@@ -66,7 +66,7 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container flex small:flex-col gap-centerpy-16 items-center">
+      <div className="container flex small:flex-col gap-40 py-16 items-center">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
             <h1 className="carousel-text text-8xl font-medium mb-0">
