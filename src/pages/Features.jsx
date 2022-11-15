@@ -67,25 +67,19 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container flex small:flex-col gap-52 py-16">
+      <div className="container flex small:flex-col gap-36 lg:gap-36 2xl:gap-52  py-16 items-center">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
-            <h1 className="carousel-text text-8xl font-medium ">
-              <span className="font-medium bg-gradient bg-clip-text text-transparent likes">
-                Likes
-              </span>
+            <h1 className="carousel-text text-8xl font-medium mb-0">
+              <span className="font-medium text-transparent likes">Likes</span>
 
-              <span className="font-medium bg-gradient bg-clip-text text-transparent reels">
-                Reels
-              </span>
+              <span className="font-medium text-transparent reels">Reels</span>
 
-              <span className="font-medium bg-gradient bg-clip-text text-transparent share">
-                Share
-              </span>
+              <span className="font-medium text-transparent share">Share</span>
               <img
                 src={"./images/lykluk.svg"}
                 alt=""
-                className="lykluk w-[60%] -left-3 mb-[10em]"
+                className="lykluk -left-3 "
               />
               {/* <span className="carousel-text font-medium lykluk">
                 <span className="carousel-text-main  ">LYK</span>
@@ -100,17 +94,43 @@ const FeaturesHero = () => {
             <img src={share} alt="" className="share" />
           </div> */}
           <div className="hero-text">
+            <h2 className="font-semibold font-hero_text1 text-2xl">It’s your time to shine!</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, vel
-              praesentium? Dolore vitae eligendi voluptatum iste eius tempora
-              blanditiis ea magnam dicta quibusdam praesentium ut dignissimos,
-              ratione facilis sed quia voluptates architecto perferendis esse.
-              Ratione atque culpa molestiae, blanditiis eaque enim maxime ut quo
-              officia quasi esse est porro molestias eum, quas eligendi
-              consequuntur! Nam rem quas molestiae commodi voluptates, incidunt
-              error deserunt in delectus, debitis nostrum nisi explicabo
-              accusantium?
+              For the budding creatives and content lovers/creator’s! Are you a
+              part of the masses of talents who aren’t getting noticed? Do you
+              sometimes feel like you are not really getting your desired media
+              content on your feed?
+            </p><br />
+            <p>
+              {" "}
+              Imagine a platform that prioritizes new talents and perspectives,
+              where your creativity is celebrated and given priority!
+            </p><br />
+            <p>
+              {" "}
+              We are building a digital platform that improves upon existing
+              content-sharing algorithms so that new talents easily
+              break-through.
+            </p><br />
+            <p className="mb-2">
+              {" "}
+              We have also built new features to help you create better content
+              more than ever, and captivate your audience!
             </p>
+            <ul class="list-disc pl-4">
+              <li>
+                [Discover] – Discover and set new trends, locations music and
+                dance on the continent.
+              </li>
+              <li>
+                {" "}
+                Effects – Add extra dimensions to your creativity with our never
+                before seen effects
+              </li>
+              <li>
+                Filters – Add new layers to your appearance with our AI filters.
+              </li>
+            </ul>
           </div>
 
           <section className="waitlist">
@@ -132,7 +152,7 @@ const FeaturesHero = () => {
               <input
                 type="submit"
                 value="Join the waitlist"
-                className="form-btn transition-all duration-1000 ease-linear animate-pulse outline-none bg-primary relative form-control px-7 py-2 rounded-r-md"
+                className="form-btn transition-all duration-500 ease-linear outline-none bg-primary relative form-control px-7 py-2 rounded-r-md"
               />
             </form>
             <small>
@@ -167,8 +187,23 @@ const FeaturesHero = () => {
             className="max-w-xs relative hero-img"
           />
           <div className="stores flex gap-8 relative justify-center">
-            <img src="./images/playstore.svg" alt="google playstore icon" />
-            <img src="./images/applestore.svg" alt="apple store icon" />
+            <a
+              href="https://play.google.com/store/apps/details?id=com.lykluk.lykluk&gl=US&pli=1"
+              target={"_blank"}
+            >
+              <img
+                src="./images/playstore.svg"
+                alt="google playstore icon"
+                className="hover:scale-110 duration-300 ease-linear"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./images/applestore.svg"
+                alt="apple store icon"
+                className="hover:scale-110 duration-300 ease-linear"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -202,7 +237,11 @@ const FeaturesMain = () => {
   return (
     <section className="features-main relative">
       <Overlay />
-      <img src="./images/dotted_arrow.svg" alt="line" className="line absolute left-[50%] w-[35%]" />
+      <img
+        src="./images/dotted_arrow.svg"
+        alt="line"
+        className="line absolute left-[50%] w-[35%]"
+      />
       <div className="feature relative">
         <img
           src="./images/frame1.svg"
@@ -216,16 +255,19 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative"
         />
         <div className="feature-text">
-          <div className="flex flex-row-reverse justify-end items-center gap-6">
-            <img src="./images/messaging.svg" alt="messaging icon" className="w-[13%]" />
-            <h3 className="font-semibold">Send Messages</h3>
+          <div className="flex flex-row-reverse justify-end items-center gap-4">
+            <img
+              src="./images/messaging.svg"
+              alt="messaging icon"
+              className="w-[10%]"
+            />
+            <h3 className="font-bold">Send Messages</h3>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            laborum earum dignissimos architecto explicabo cupiditate aperiam
-            iusto aspernatur itaque animi ipsum ipsa eius enim dolor eveniet
-            culpa autem odit provident.
+            Stay in touch with friends and family with an easy-to-use interface,
+            secure system and captivating features. Communicating couldn't be
+            easier.
           </p>
         </div>
       </div>
@@ -242,16 +284,19 @@ const FeaturesMain = () => {
           className="feature-screen z-40 order-2 relative one"
         />
         <div className="feature-text two">
-          <div className="flex flex-row-reverse justify-end items-center gap-6">
-            <img src="./images/sharing.svg" alt="share icon" className="w-[13%]" />
-            <h3 className="font-semibold">Share Videos</h3>
+          <div className="flex flex-row-reverse justify-end items-center gap-4">
+            <img
+              src="./images/sharing.svg"
+              alt="share icon"
+              className="w-[10%]"
+            />
+            <h3 className="font-bold">Share Videos</h3>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            laborum earum dignissimos architecto explicabo cupiditate aperiam
-            iusto aspernatur itaque animi ipsum ipsa eius enim dolor eveniet
-            culpa autem odit provident.
+            Share entertaining and exciting videos from a creative community
+            with mutuals in any location. And your friends aren't left out
+            either.
           </p>
         </div>
       </div>
@@ -268,15 +313,18 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative feature-screen-3"
         />
         <div className="feature-text">
-          <div className="flex flex-row-reverse justify-end items-center gap-6">
-            <img src="./images/add.svg" alt="add friends icon" className="w-[13%]" />
-            <h3 className="font-semibold">Make New Friends</h3>
+          <div className="flex flex-row-reverse justify-end items-center gap-4">
+            <img
+              src="./images/add.svg"
+              alt="add friends icon"
+              className="w-[10%]"
+            />
+            <h3 className="font-bold">Make New Friends</h3>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            laborum earum dignissimos architecto explicabo cupiditate aperiam
-            iusto aspernatur itaque animi ipsum ipsa eius enim dolor eveniet
-            culpa autem odit provident.
+            Connect with fellow creatives and content lovers across the globe in
+            a creative and inclusive space. Our user friendly algorithm makes
+            for a wider reach amongst users.
           </p>
         </div>
       </div>
@@ -317,6 +365,11 @@ const Features = () => (
     </section>
     <FeaturesMain />
     <div className="features-gallery relative">
+      <img
+        src="./images/lykluk-lite.svg"
+        alt="lykluk logo"
+        className="absolute top-4 left-4  z-[100] w-[3.5rem]"
+      />
       <div>
         <img
           src="./images/features_1.jpg"

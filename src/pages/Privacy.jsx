@@ -1,8 +1,11 @@
+import Header from "../components/Header";
+
 const Privacy = () => {
     return (
       <div className="privacy-policy">
+        <Header/>
         <div className="container text-justify">
-          <h1>LYKLUK&rsquo;S PRIVACY POLICY</h1>
+          <h1 className="text-center">LYKLUK&rsquo;S PRIVACY POLICY</h1>
 
           <p style={{textAlign: "center"}}>
             <span>

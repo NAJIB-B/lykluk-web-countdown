@@ -17,7 +17,6 @@ body {
   max-width: 100%;
   height: 100%;
   overflow-x: hidden;
-
 }
 .carousel-text {
   position: relative;
@@ -26,50 +25,6 @@ body {
 
 .carousel {
   overflow: hidden;
-}
-
-.anim-a {
-  animation: in 4s linear infinite alternate;
-  position: absolute;
-  bottom: -100px;
-}
-.anim-b {
-  animation: in 4s linear infinite alternate;
-  position: absolute;
-  bottom: -100px;
-  animation-delay: 2s;
-}
-.anim-c {
-  animation: in 4s linear infinite alternate;
-  position: absolute;
-  bottom: -100px;
-  animation-delay: 6s;
-}
-.anim-d {
-  animation: in 4s linear infinite alternate;
-  position: absolute;
-  bottom: -100px;
-  animation-delay: 8s;
-}
-
-@keyframes in {
- 0% {
-  display: none;
-  bottom: -100px;
- }
- 25% {
-  display: block;
-  bottom: 0;
- }
-
-  75% {
-  display: block;
-  bottom: 0;
- }
-100% {
-  visibility: hidden;
-  bottom: -100px;
-} 
 }
 
 a {
@@ -107,13 +62,12 @@ button {
 }
 
 .timer-cards {
-  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary_lite;
+  @apply text-2xl text-white font-medium w-16 h-16 bg-black rounded-md justify-center items-center flex bg-primary animate-pulse;
 }
 
 .frames {
-  @apply z-50 absolute
+  @apply z-50 absolute;
 }
-
 
 .overlay {
   background: rgba(144, 0, 254, 0.1);
@@ -135,13 +89,11 @@ button {
 }
 
 .logo-img {
-  width: 70px;
-
+  width: 70%;
 }
 
 .nav {
   display: flex;
-  /* position: relative; */
 }
 
 .nav-items {
@@ -171,6 +123,21 @@ a {
 /* Pages */
 
 /* Home */
+.hero-img {
+  position: relative;
+  animation: fadein 2s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    right: -100%;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
 
 .timer {
   display: flex;
@@ -210,7 +177,8 @@ a {
 /* Contact */
 .contact-page {
   padding: 0;
-  background: rgba(144, 0, 254, 0.1);
+  background: url(../images/contact_bg.jpg);
+  background-size: cover;
   position: relative;
 }
 
@@ -298,7 +266,6 @@ iframe {
   width: 20px;
 }
 
-
 /* Footer */
 
 .footer {
@@ -353,7 +320,16 @@ iframe {
   line-height: 1.6;
   color: black;
 }
+
 /* lykluk animation on coming soon page */
+.likes,
+.reels,
+.share,.contact-heading {
+  background: linear-gradient(90deg, #000000 13.39%, #8e00fe 101.93%);
+  background-clip: text;
+  color: transparent;
+}
+
 .imagesAnimationDiv {
   position: relative;
   overflow: hidden;
@@ -361,8 +337,6 @@ iframe {
 }
 .lykluk {
   position: absolute;
-
-  left: -34px;
   top: 120px;
   animation: lykluk 5.45s linear infinite alternate;
 }
@@ -409,15 +383,6 @@ iframe {
     visibility: hidden;
   }
 }
-/* 
-@media (min-aspect-ratio: 16/9) {
-  .video-bg {
-    width: 100%;
-    height: auto;
-  
-  }
-}
-
 
 @media screen and (max-width: 968px) {
   body {
@@ -453,7 +418,7 @@ iframe {
       right: 0;
     }
   }
-  
+
   .timer {
     justify-content: center;
   }
@@ -501,10 +466,6 @@ iframe {
 
   /* Contact */
 
-  .contact-page {
-    /* width: %; */
-  }
-
   .contact-page h1 {
     font-size: 1.5em;
   }
@@ -520,17 +481,16 @@ iframe {
     width: 90%;
   }
 
-  /* About */
+  /* Coming soon*/
   .features-page {
     width: 100%;
   }
 
-  /* Footer */
+  .features-hero .container {
+    gap: 2em;
+  }
 
-  /* .footer {
-    padding: 1em 0 2em;
-    background-color: white;
-  } */
+  /* Footer */
 
   .footer-container {
     gap: 1em;
@@ -565,7 +525,7 @@ iframe {
   .footer-links-list {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 0.5em;
   }
 
   .footer-links-list ul {

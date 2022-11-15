@@ -1,13 +1,13 @@
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer relative">
       <div className="container footer-container">
         <div className="footer-logo-div">
           <div className="logo">
             <img
               src="./images/lykluk_logo.svg"
               alt="lykluk logo"
-              className="logo-img"
+              className="w-[40%]"
             />
           </div>
           <div className="footer-social-icons">

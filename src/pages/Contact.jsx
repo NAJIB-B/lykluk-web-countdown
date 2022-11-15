@@ -1,12 +1,18 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
+
+const Overlay = () => (
+  <div className="absolute bottom-0 right-0 left-0 top-0 bg-white opacity-70 "></div>
+);
+
 const Contact = () => {
   return (
     <div className="contact-page">
+      <Overlay/>
       <Header />
-      <div className="container contact-page-container">
-        <h1 className=" font-medium">Contact Us</h1>
+      <div className="container contact-page-container relative">
+        <h1 className=" font-medium contact-heading">Contact Us</h1>
         <div className="contact-us">
           <div className="contacts">
             <h3>Our Contacts</h3>

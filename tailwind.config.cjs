@@ -9,6 +9,8 @@ module.exports = {
       colors: {
         primary: "#8e00fe",
         primary_lite: "rgba(144, 0, 254, 0.8)",
+        gradient:
+          "linear-gradient(90deg, rgba(0, 0, 0, 0.81) 13.39%, #8E00FE 101.93%)",
       },
       fontFamily: {
         hero_text1: ["Gluten", "Mochiy Pop One"],

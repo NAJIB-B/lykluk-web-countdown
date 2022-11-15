@@ -49,8 +49,10 @@ const Header = () => {
 
   return (
     <header
-      className= "header py-4" 
-      style={{backgroundColor: pathname === "/contact"? "white": "transparent", paddingTop: pathname === "/contact"? "0" : "1em"}}
+      className="header py-4"
+      // style={{
+      //   paddingTop: pathname === "/contact" ? "0" : "1em",
+      // }}
     >
       <div className="container header-container">
         <div className="logo z-40">
