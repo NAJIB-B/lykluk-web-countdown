@@ -66,7 +66,7 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container flex small:flex-col gapcenter lg:gap-36 2xl:gap252  py-16 items-center">
+      <div className="container flex small:flex-col gap-40 py-16 items-center">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
             <h1 className="carousel-text text-8xl font-medium mb-0">
@@ -93,24 +93,29 @@ const FeaturesHero = () => {
             <img src={share} alt="" className="share" />
           </div> */}
           <div className="hero-text">
-            <h2 className="font-semibold font-hero_text1 text-2xl">It’s your time to shine!</h2>
+            <h2 className="font-semibold font-hero_text1 text-2xl">
+              It’s your time to shine!
+            </h2>
             <p>
               For the budding creatives and content lovers/creator’s! Are you a
               part of the masses of talents who aren’t getting noticed? Do you
               sometimes feel like you are not really getting your desired media
               content on your feed?
-            </p><br />
+            </p>
+            <br />
             <p>
               {" "}
               Imagine a platform that prioritizes new talents and perspectives,
               where your creativity is celebrated and given priority!
-            </p><br />
+            </p>
+            <br />
             <p>
               {" "}
               We are building a digital platform that improves upon existing
               content-sharing algorithms so that new talents easily
               break-through.
-            </p><br />
+            </p>
+            <br />
             <p className="mb-2">
               {" "}
               We have also built new features to help you create better content
@@ -254,7 +259,7 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative"
         />
         <div className="feature-text">
-          <div className="flex flex-row-reverse justify-center items-center gap-2">
+          <div className="flex flex-row-reverse justify-end items-center gap-4">
             <img
               src="./images/messaging.svg"
               alt="messaging icon"
@@ -283,7 +288,7 @@ const FeaturesMain = () => {
           className="feature-screen z-40 order-2 relative one"
         />
         <div className="feature-text two">
-          <div className="flex flex-row-reverse justify-center items-center gap-2">
+          <div className="flex flex-row-reverse justify-end items-center gap-4">
             <img
               src="./images/sharing.svg"
               alt="share icon"
@@ -312,7 +317,7 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative feature-screen-3"
         />
         <div className="feature-text">
-          <div className="flex flex-row-reverse justify-center items-center gap-2">
+          <div className="flex flex-row-reverse justify-end items-center gap-4">
             <img
               src="./images/add.svg"
               alt="add friends icon"
