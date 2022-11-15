@@ -324,7 +324,8 @@ iframe {
 /* lykluk animation on coming soon page */
 .likes,
 .reels,
-.share,.contact-heading {
+.share,
+.contact-heading {
   background: linear-gradient(90deg, #000000 13.39%, #8e00fe 101.93%);
   background-clip: text;
   color: transparent;
@@ -399,7 +400,7 @@ iframe {
     position: absolute;
     top: -1em;
     right: 0;
-    background: rgba(195, 171, 213, 0.893);
+    background: rgba(255, 255, 255, 0.9);
     min-width: 60vw;
     flex-direction: column;
     padding: 3em;

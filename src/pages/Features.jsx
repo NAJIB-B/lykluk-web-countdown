@@ -2,7 +2,6 @@ import Footer from "../components/Footer";
 import { useState, useEffect, useContext, useRef } from "react";
 import Header from "../components/Header";
 import { Context } from "../Context";
-// import useLogic from "../useLogic.js";
 import { useInView } from "react-intersection-observer";
 
 const FeaturesHero = () => {
@@ -67,7 +66,7 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container flex small:flex-col gap-36 lg:gap-36 2xl:gap-52  py-16 items-center">
+      <div className="container flex small:flex-col gapcenter lg:gap-36 2xl:gap252  py-16 items-center">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
             <h1 className="carousel-text text-8xl font-medium mb-0">
@@ -255,7 +254,7 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative"
         />
         <div className="feature-text">
-          <div className="flex flex-row-reverse justify-end items-center gap-4">
+          <div className="flex flex-row-reverse justify-center items-center gap-2">
             <img
               src="./images/messaging.svg"
               alt="messaging icon"
@@ -284,7 +283,7 @@ const FeaturesMain = () => {
           className="feature-screen z-40 order-2 relative one"
         />
         <div className="feature-text two">
-          <div className="flex flex-row-reverse justify-end items-center gap-4">
+          <div className="flex flex-row-reverse justify-center items-center gap-2">
             <img
               src="./images/sharing.svg"
               alt="share icon"
@@ -313,7 +312,7 @@ const FeaturesMain = () => {
           className="feature-screen z-40 relative feature-screen-3"
         />
         <div className="feature-text">
-          <div className="flex flex-row-reverse justify-end items-center gap-4">
+          <div className="flex flex-row-reverse justify-center items-center gap-2">
             <img
               src="./images/add.svg"
               alt="add friends icon"
