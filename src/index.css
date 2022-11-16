@@ -328,6 +328,7 @@ iframe {
 .contact-heading {
   background: linear-gradient(90deg, #000000 13.39%, #8e00fe 101.93%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
