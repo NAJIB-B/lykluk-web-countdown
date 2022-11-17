@@ -66,7 +66,7 @@ const FeaturesHero = () => {
     <section className="features-hero relative">
       <Overlay />
       <Header />
-      <div className="container flex small:flex-col gap-52 py-16 items-center">
+      <div className="container hero-container flex small:flex-col gap-52  py-16 items-center">
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
             <h1 className="carousel-text text-8xl font-medium mb-0">
@@ -92,7 +92,7 @@ const FeaturesHero = () => {
             <img src={reels} alt="" className="reels" />
             <img src={share} alt="" className="share" />
           </div> */}
-          <div className="hero-text">
+          <div className="hero-text ">
             <h2 className="font-semibold font-hero_text1 text-2xl">
               It’s your time to shine!
             </h2>
@@ -142,7 +142,7 @@ const FeaturesHero = () => {
               action=""
               method="post"
               onSubmit={handleSubmit}
-              className="w-full flex justify-start"
+              className="w-full flex "
             >
               <input
                 type="text"
@@ -156,7 +156,7 @@ const FeaturesHero = () => {
               <input
                 type="submit"
                 value="Join the waitlist"
-                className="form-btn transition-all duration-500 ease-linear outline-none bg-primary relative form-control px-7 py-2 rounded-r-md"
+                className="form-btn transition-all duration-500 ease-linear outline-none bg-primary relative form-control px-7 py-2 rounded-r-md w-full"
               />
             </form>
             <small>
@@ -275,7 +275,7 @@ const FeaturesMain = () => {
           </p>
         </div>
       </div>
-      <div className="feature justify-end relative animate-second">
+      <div className="feature justify-end relative">
         <img
           src="./images/frame2.svg"
           alt="mobile screen"

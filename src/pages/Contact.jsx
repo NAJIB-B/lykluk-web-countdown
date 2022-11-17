@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 
 const Overlay = () => (
-  <div className="absolute bottom-0 right-0 left-0 top-0 bg-white opacity-70 "></div>
+  <div className="absolute bottom-0 right-0 left-0 top-0 bg-white opacity-80 "></div>
 );
 
 const Contact = () => {

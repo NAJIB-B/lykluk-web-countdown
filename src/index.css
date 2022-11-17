@@ -150,10 +150,11 @@ a {
   margin: 0;
 }
 
+
 .form-inp,
 .form-btn {
   border: none;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .form-inp {
@@ -163,7 +164,7 @@ a {
 }
 
 .form-btn {
-  width: 40%;
+  width: 50%;
   color: white;
   cursor: pointer;
   position: relative;
@@ -173,6 +174,8 @@ a {
   background: black;
   position: relative;
 }
+
+
 
 /* Contact */
 .contact-page {
