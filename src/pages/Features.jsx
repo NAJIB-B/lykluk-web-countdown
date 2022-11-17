@@ -70,9 +70,9 @@ const FeaturesHero = () => {
         <div className="features-hero-main flex flex-col gap-8 relative py-16 ">
           <div className="carousel relative py-4 imagesAnimationDiv">
             <h1 className="carousel-text text-8xl font-medium mb-0">
-              <span className="font-medium text-transparent likes">Likes</span>
+              <span className="font-medium text-transparent likes">Lyks</span>
 
-              <span className="font-medium text-transparent reels">Reels</span>
+              <span className="font-medium text-transparent reels">Luks</span>
 
               <span className="font-medium text-transparent share">Share</span>
               <img
