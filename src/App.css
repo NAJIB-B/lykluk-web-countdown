@@ -100,10 +100,6 @@
 .text-shadow {
   text-shadow: 1px 1px black;
 }
-.lykluk {
-    width: 350px;
-    margin-bottom: 1em;
-  }
 
 @media screen and (max-width: 2000px){
 
@@ -144,10 +140,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .lykluk {
-    width: 350px;
-    margin-bottom: 1em;
-  }
 }
 
 

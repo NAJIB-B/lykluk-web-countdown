@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: mahameru-medium;
+  src: url(../fonts/Mahameru-Medium.otf);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -150,7 +155,6 @@ a {
   margin: 0;
 }
 
-
 .form-inp,
 .form-btn {
   border: none;
@@ -174,8 +178,6 @@ a {
   background: black;
   position: relative;
 }
-
-
 
 /* Contact */
 .contact-page {
@@ -333,17 +335,28 @@ iframe {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-family: mahameru-medium;
+}
+
+.likes,
+.reels,
+.share,
+.lykluk {
+  font-size: 100%;
 }
 
 .imagesAnimationDiv {
   position: relative;
   overflow: hidden;
   height: 110px;
+  margin-bottom: -1em;
 }
+
 .lykluk {
   position: absolute;
   top: 120px;
   animation: lykluk 5.45s linear infinite alternate;
+  font-family: mahameru-medium;
 }
 .likes {
   position: absolute;
@@ -392,6 +405,13 @@ iframe {
 @media screen and (max-width: 968px) {
   body {
     font-size: 14px;
+  }
+
+  .likes,
+  .reels,
+  .share,
+  .lykluk {
+    font-size: 80%;
   }
 
   .nav-items {

@@ -5,18 +5,6 @@ import { Context } from "../Context";
 import { useInView } from "react-intersection-observer";
 
 const FeaturesHero = () => {
-  // Declaring as count state for Carousel animation text
-  const [count, setCount] = useState(() => 0);
-
-  // Incrementing count
-  // useEffect(() => {
-  //   const interval = setTimeout(() => {
-  //     setCount((prev) => (prev === 3 ? 0 : prev + 1));
-  //   }, 4000);
-  //   return () => {
-  //     clearTimeout(interval);
-  //   };
-  // }, [count]);
 
   // Receiving countdown state from  context
   const { countDown } = useContext(Context);
@@ -75,25 +63,22 @@ const FeaturesHero = () => {
               <span className="font-medium text-transparent reels">Luks</span>
 
               <span className="font-medium text-transparent share">Share</span>
-              <img
+              {/* <img
                 src={"./images/lykluk.svg"}
                 alt=""
                 className="lykluk -left-3 "
-              />
-              {/* <span className="carousel-text font-medium lykluk">
-                <span className="carousel-text-main  ">LYK</span>
-                <span className="carousel-text-main text-primary">LUK</span>
-              </span> */}
+              /> */}
+              <span className=" font-medium lykluk">
+                <span>LYK</span>
+                <span className="text-primary">LUK</span>
+              </span>
             </h1>
           </div>
-          {/* <div className="imagesAnimationDiv">
-            <img src={lykluk} alt="" className="lykluk" />
-            <img src={likes} alt="" className="likes" />
-            <img src={reels} alt="" className="reels" />
-            <img src={share} alt="" className="share" />
-          </div> */}
           <div className="hero-text ">
-            <h2 className="font-semibold font-hero_text1 text-2xl">
+            <h2
+              className="font-semibold text-2xl"
+              style={{ fontFamily: "mahameru-medium" }}
+            >
               It’s your time to shine!
             </h2>
             <p>
@@ -188,7 +173,7 @@ const FeaturesHero = () => {
           <img
             src="./images/screen_hero.svg"
             alt="lykluk screen image"
-            className="max-w-xs relative hero-img"
+            className="max-w-xs  hero-img"
           />
           <div className="stores flex gap-8 relative justify-center">
             <a
