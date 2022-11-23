@@ -82,44 +82,21 @@ const FeaturesHero = () => {
               It’s your time to shine!
             </h2>
             <p>
-              For the budding creatives and content lovers/creator’s! Are you a
-              part of the masses of talents who aren’t getting noticed? Do you
-              sometimes feel like you are not really getting your desired media
-              content on your feed?
+             For the budding creatives and dreamers! Are you a part of the
+masses of talents who aren't getting noticed? Do you sometimes
+feel like you're not really getting your desired media content on
+your feed?
             </p>
             <br />
             <p>
               {" "}
-              Imagine a platform that prioritizes new talents and perspectives,
-              where your creativity is celebrated and given priority!
+             Imagine a platform that prioritizes new talents and perspectives,
+where your creativity is celebrated and escalated!
             </p>
-            <br />
-            <p>
-              {" "}
-              We are building a digital platform that improves upon existing
-              content-sharing algorithms so that new talents easily
-              break-through.
-            </p>
-            <br />
-            <p className="mb-2">
-              {" "}
-              We have also built new features to help you create better content
-              more than ever, and captivate your audience!
-            </p>
-            <ul class="list-disc pl-4">
-              <li>
-                [Discover] – Discover and set new trends, locations music and
-                dance on the continent.
-              </li>
-              <li>
-                {" "}
-                Effects – Add extra dimensions to your creativity with our never
-                before seen effects
-              </li>
-              <li>
-                Filters – Add new layers to your appearance with our AI filters.
-              </li>
-            </ul>
+           
+           
+           
+             
           </div>
 
           <section className="waitlist">
